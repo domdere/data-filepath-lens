@@ -19,7 +19,7 @@ ${DEPS}: ${SANDBOX} $(wildcard *.cabal)
 build: ${DEPS}
 	cabal build --ghc-option="-Werror"
 
-test: ${DEPS}
+quickcheck: ${DEPS}
 	cabal test quickcheck --log=/dev/stdout
 
 hlint: ${DEPS}
